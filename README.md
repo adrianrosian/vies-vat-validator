@@ -10,9 +10,7 @@ It's inspired by: http://isvat.appspot.com/
 Examples
 -------------
 
-http://wc.dev/vat.php?country=ES&number=B63920920
-
-Parameters are passed via GET and both are mandatory:
+`php vies.php ES B63920920`
 
 country: A valid European ISO country code.
 
@@ -21,23 +19,15 @@ number: Vat number to request.
 Response
 -------
 
-The output is a json object like:
-
-{
-	is_valid: true/false
-}
+In case of successful interrogation, the response is either `Code is valid` or `Code is not valid`
 
 
 Error logging
 --------------
 
-There is a minimal error reporting. Log messages are reported like:
+There is a minimal error reporting. 
 
-{
-	error_message: "XXXXX"
-}
-
-The errors logged are:
+The errors shown are:
 
 - Invalid country
 - No vat / country specified.
